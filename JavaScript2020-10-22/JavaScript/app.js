@@ -1,5 +1,3 @@
-'use strict';
-
 
 
 let knygos = 
@@ -229,11 +227,16 @@ let knygos =
 ]
 
 
-for (let key in knygos) {
-	console.log(knygos[key]);
-	for(let i = 0; i < knygos[key].length; i++) {
-		console.log(i);
+for (let kateg of knygos) {
+	for (let kategorija in kateg) {
+		console.log("kategorija: " + kategorija + " ir  " + kategorija.length + " knygos " + kategorija + " kategorijoje")
+		console.log("----------------------------------");
+
+		for (let kiek in kategorija) {
+			for (let bookInfo in kateg[kategorija][kiek]) {
+				(bookInfo == 'leidimoMetai') && (kateg[kategorija][kiek][bookInfo] == '2020') ? console.log("     "+ bookInfo + ":   " + kateg[kategorija][kiek][bookInfo] + " Nauja knyga") : console.log("     "+bookInfo+ ":   " +kateg[kategorija][kiek][bookInfo]);
+			}
+			console.log("----------------------------------------------")
+		}
 	}
 }
-
-
