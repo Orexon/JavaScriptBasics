@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	<link rel="stylesheet" href="bootstraplink" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>JS AJAX</title>
+</head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <header class="col-sm-12">
+                    <h1 class="text-center">Ajax</h1>
+                </header>
+            </div>
+        </div>
+        <div class="container-fluid main">
+            <div class="row">
+                <aside class="col-sm-4 menu">
+                    <button class="showMenu">Navigacija</button>
+                </aside>
+                <section class="col-sm-8 content">
+                    <h2>Mokiniu sarasas</h2>
+                    <div class="mokiniai">
+ 
+                    </div>
+				</section>
+				<section class="col-sm-12">
+					<label for="inputPlace">Pasirinkite miesta:</label>
+                    <input list="places" name="places" id="inputPlace">
+		
+					<datalist class="ltmiestai" id="places"> 
+						
+					</datalist>
+				</section>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <footer class="footer navbar-fixed-bottom">
+ 
+                </footer>
+            </div>
+		</div>
+
+		<script src="js/miestas.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/mokiniai.js"></script>
+        <script src="js/oras.js"></script>
+    </body>
+</html>
