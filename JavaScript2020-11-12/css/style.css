@@ -1,0 +1,18 @@
+.gallery {
+    text-align: center;
+    padding-top: 40px;
+}
+.gallery > ul {
+    list-style-type: none;
+}
+.gallery > ul> li {
+    display:inline;
+}
+img {
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+.show-saved{
+    text-align: center;
+}

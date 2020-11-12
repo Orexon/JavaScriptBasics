@@ -10,7 +10,7 @@ manoAjax.onreadystatechange = function (){ //callback funkcija
 		}
 	}
 };
-manoAjax.open('GET', 'nav/nav.html'); //requestas
+manoAjax.open('GET', 'http://web-training.lt/img_api/'); //requestas
 document.querySelector('button.showMenu').onclick = function(){ //event'as po button paspaudimo
 	manoAjax.send(); //siunciama uzklausa
 	document.querySelector('button.showMenu').style.display="none"; //paslepaiamas mygtukas
