@@ -1,0 +1,27 @@
+.flying {
+  padding-top: 40px; }
+
+#PrintTicket #nameOfFirst, #nameOfLast {
+  letter-spacing: 3px; }
+
+.modal.modal-static .modal-dialog {
+  -webkit-transform: none !important;
+  transform: none !important; }
+
+#dateToday {
+  font-size: 30px; }
+
+#logoRow {
+  vertical-align: middle;
+  font-size: 30px; }
+
+.bord {
+  border-top: solid 1px; }
+
+.lPad {
+  padding-left: 15px; }
+
+#PrintTicket {
+  font-family: Arial, Helvetica, sans-serif; }
+
+/*# sourceMappingURL=style.css.map */

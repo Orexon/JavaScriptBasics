@@ -1,7 +1,5 @@
 let bestCode = new XMLHttpRequest(); //sukuriamas XMLHttpRequest objektas
 
-
-
 document.querySelector('.show').onclick = function() {  // event'as po button paspaudimo
     if (bestCode.readyState === 4) {    // received
         if (bestCode.status === 200) {  // OK
@@ -44,15 +42,16 @@ document.querySelector('.mix').onclick = function () {
     }
 }
 //save current mixed picture list
+
 document.querySelector('.save').onclick = function () {
     let currentMixedImagesList = document.querySelectorAll('.gallery ul li img');       //isidedu visus img elementus i masyva kad galeciau pasiimt .lenght ir iteruot
     let savedImages = [];                                                                      // susikuriu tuscia array i kuri sudesiu visa src info ir laikysiu
-    for(let b = 0; b < currentMixedImagesList.length; b++){                                  // iteruoju jog paimciau kiekvieno elemento src ir ideciau i empty
+    for(let b = 0; b < currentMixedImagesList.length; b++){                                   // iteruoju jog paimciau kiekvieno elemento src ir ideciau i empty
         savedImages.push(currentMixedImagesList[b].src);                                     // pushinu kiekvieno currentMixedImagesList elemento src attribut i savedImages arr
-        localStorage.setItem('finalSavedImages',JSON.stringify(savedImages)); // Issaugau atmintyje ir convertinu gaunama rezulata i JSON string'a
+        localStorage.setItem('finalSavedImages',JSON.stringify(savedImages));               // Issaugau atmintyje ir convertinu gaunama rezulata i JSON string'a
     }
-    console.log(savedImages)                                               // issiconsolinu response, jog suzinoti kaip atrodo savedImages array -  nebutina.
-    console.log(JSON.stringify(savedImages))                              // issiconsolinu response, jog suzinoti kaip atrodo savedImages stringify array -  nebutina.
+    console.log(savedImages)                                              // issiconsolinu response, jog suzinoti kaip atrodo savedImages array -  nebutina.
+    console.log(JSON.stringify(savedImages))                        // issiconsolinu response, jog suzinoti kaip atrodo savedImages stringify array -  nebutina.
     console.log(typeof(localStorage.getItem('finalSavedImages')));   // issiconsolinu response, koks mano response type -  nebutina.
 }
 

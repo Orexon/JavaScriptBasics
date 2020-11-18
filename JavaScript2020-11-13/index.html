@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Promise & Async</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/f264240d41.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<main class="container">
+    <div class="row col-sm-12 flying">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="display-3">MK CRASH AIRLINES</h1>
+                <p class="lead text-muted">Something amazing happens every minutes in the MK Crash Airlines, and we assure you, our dear customer,
+                    that's it's not a crash of Our Airplane, but a crash of the belief, that this flying comfort can't be achieved.
+                    Sometimes you can overcome your fears, by flying with us,and reach your destination with a thrill of excitement,just don't forget your seatbelts!</p>
+                <p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary registerFlight" data-toggle="modal" data-target="#ModalForm">
+                        Register Flight
+                    </button>
+                    <button type="button" class="ml-2 btn btn-primary printTicket" data-toggle="modal" data-target="#PrintTicket">
+                        Print Ticket
+                    </button>
+                </p>
+            </div>
+        </section>
+        <!-- Modal 1-->
+        <div class="col-md-12 modal fade bd-modal-lg" data-backdrop="static" id="ModalForm" tabindex="-1" role="dialog"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Registration Info</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName">First name</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName">Last name</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="flightNumber">Flight number</label>
+                                    <!--<input class="custom-select" id="flightNumber" type="text" list="flightNumbers" required />-->
+                                    <select class="custom-select" id="flightNumber">
+                                        <option selected disabled>Choose Flight Number...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="pidNumber">Personal Identification Number</label>
+                                    <input type="text" class="form-control" id="pidNumber"  required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="countryFrom">Country of Departure</label>
+                                    <input class="form-control" placeholder="Enter aCountry" id="countryFrom" type="text"  required/>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="countryTo">Arrival Country</label>
+                                    <input class="form-control" placeholder="Enter a Country" id="countryTo" type="text" required/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="destinationFrom">Departs from ... Location</label>
+                                    <!--<input class="custom-select" id="destinationFrom" type="text" list="flightLocations" required />-->
+                                    <select class="custom-select" id="destinationFrom">
+                                        <option selected disabled>Select location...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="destinationTo">Arrives at ... destination</label>
+                                    <!--<input class="custom-select" id="destinationTo" type="text" list="flightLocationsTo" required />-->
+                                    <select class="custom-select" id="destinationTo">
+                                        <option selected disabled>Select location...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="departingTime">Enter the time of departure</label>
+                                    <input class="custom-select" type="datetime-local" id="departingTime" name="datetime" value="2020-11-15T19:30"
+                                           min="2020-11-15T00:00" max="2022-11-14T00:00">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="arrivalTime">Enter the time of arrival</label>
+                                    <input class="custom-select" type="datetime-local" id="arrivalTime" name="meeting-time" value="2020-11-15T19:40"
+                                           min="2020-11-15T00:10" max="2022-11-14T00:00">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="moreInfo">Write any additional information</label>
+                                    <textarea class="form-control" id="moreInfo" placeholder="Write additional information"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-8 mb-3">
+                                    <label for="luggageInfo">Luggage status</label>
+                                    <select class="custom-select" id="luggageInfo" required>
+                                        <option selected disabled value="">select status</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="price">Price €</label>
+                                    <input type="number" min="0.00" class="form-control" id="price" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary save">Save information & Register Flight</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 2-->
+        <div class="modal fade bd-example-modal-xl" data-backdrop="static" id="PrintTicket"  tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Please Confirm the details of the flight</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                       <div class="container-fluid">
+                           <div class="row">
+                               <div class="col-8">
+                                   <div class="row">
+                                       <div class="col-4" id="nameOfFirst"></div>
+                                       <div class="col-4" id="nameOfLast"></div>
+                                       <div class="col-4" id="nameOfPid"></div>
+                                   </div>
+                                    <div class="row">
+                                        <div class="col-4" id="dateToday"></div>
+                                        <div class="col-8">
+                                            <div class="row">
+                                                <div class="col-3">FROM: </div>
+                                                <div class="col-9" id="flyingFrom"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-3">TO : </div>
+                                                <div class="col-9" id="flyingTo"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-1" id="logoRow">
+                                        <div><img src="images/fly50.png" alt="Airlines logo"/></div>
+                                        <div class="align-self-center">MK Crash International</div>
+                                    </div>
+                                    <div class="row mb-1">
+                                        <div class="col-2">Departure: </div>
+                                        <div class="col-3" id="dTime"></div>
+                                        <div class="col-1"><i class="fas fa-arrow-right m-auto"></i></div>
+                                        <div class="col-2">Arrival: </div>
+                                        <div class="col-4" id="aTime"></div>
+                                    </div>
+                                   <div class="row mb-1">
+                                       <div class="col-3">Length of flight: </div>
+                                       <div class="col-5" id="durationTime"></div>
+                                       <div class="col-4" id="flNum"></div>
+                                   </div>
+                                   <div class="row">
+                                       <div class="col-12" id="notes"></div>
+                                   </div>
+                               </div>
+                               <div class="col-4">
+                                   <div class="row col-12"><h4>Travel Overview</h4></div>
+                                   <div class="row col-12" id="returnFlight"></div>
+                                   <div class="row">
+                                       <div class="col-9">
+                                           <div class="row">
+                                               <div class="col-12">Traveler: 1 Adult</div>
+                                               <div class="col-12 lPad">
+                                                   <div class="col-12">Flight Cost:</div>
+                                                   <div class="col-12">Taxes and fees:</div>
+                                                   <div class="col-12">Luggage Fee:</div>
+                                               </div>
+                                               <div class="col-12">Booking Fee:</div>
+                                           </div>
+                                       </div>
+                                       <div class="col-3">
+                                           <div class="row text-right">
+                                               <div class="col-12" id="flightCost"></div>
+                                               <div class="col-12" id="toPay"></div>
+                                               <div class="col-12" id="taxes"></div>
+                                               <div class="col-12" id="luggageFee"></div>
+                                               <div class="col-12" id="bookingFee"></div>
+                                           </div>
+                                       </div>
+                                       <div class="col-12">
+                                           <div class="row bord text-right">
+                                               <div class="col-9">Total price of flight:</div>
+                                               <div class="col-3" id="totalToPay"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary confirmPrint" data-dismiss="modal">Confirm & Print Ticket</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<script src="js/script.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</body>
+</html>
