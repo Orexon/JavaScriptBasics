@@ -1,0 +1,94 @@
+Main {
+  font-family: "Open Sans", sans-serif;
+}
+
+Main #Icon {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+Main Button.btn-outline-dark {
+  background-color: #f4f7f7;
+  border-color: #d4d3d3;
+}
+
+Main Button.btn-outline-dark:hover,
+Main .btn-outline-dark:focus,
+Main .btn-outline-dark:active,
+Main .btn-default.active {
+  border: solid 1px;
+  border-color: #161616;
+}
+
+Main .buttonz {
+  position: relative;
+}
+
+Main .buttonz .HamburgerButton,
+Main .buttonz .DeleteButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+Main .buttonz .HamburgerButton {
+  margin-right: 45px;
+}
+
+Main .card {
+  width: 330px;
+}
+
+Main .card-img-top {
+  height: 170px;
+}
+
+Main .datImage {
+  margin-top: -72px;
+  width: 100px !important;
+  height: 100px;
+  border: solid 1px;
+  border-color: #d4d3d3;
+  padding: 12px;
+  background-color: #f4f7f7;
+}
+
+Main .card-body {
+  text-align: center;
+  border-top: solid 1px;
+  border-color: #d4d3d3;
+}
+
+Main .card-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+
+Main .card-text {
+  font-weight: 400;
+}
+
+Main .card-footer {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+Main .line {
+  border-right: solid 1px;
+  border-color: #d4d3d3;
+}
+
+Main .breadcline1 {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+Main .breadcline2 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: grey;
+}
+/*# sourceMappingURL=Main.css.map */

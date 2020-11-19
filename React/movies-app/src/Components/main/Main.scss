@@ -1,0 +1,77 @@
+Main {
+	font-family: "Open Sans", sans-serif;
+	#Icon {
+		border-top-right-radius: 0.25rem;
+		border-bottom-right-radius: 0.25rem;
+	}
+	Button.btn-outline-dark {
+		background-color: #f4f7f7;
+		border-color: #d4d3d3;
+	}
+	Button.btn-outline-dark:hover,
+	.btn-outline-dark:focus,
+	.btn-outline-dark:active,
+	.btn-default.active {
+		border: solid 1px;
+		border-color: #161616;
+	}
+	.buttonz {
+		position: relative;
+		.HamburgerButton,
+		.DeleteButton {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			z-index: 1;
+		}
+		.HamburgerButton {
+			margin-right: 45px;
+		}
+	}
+	.card {
+		width: 330px;
+	}
+	.card-img-top {
+		height: 170px;
+	}
+	.datImage {
+		margin-top: -72px;
+		width: 100px !important;
+		height: 100px;
+		border: solid 1px;
+		border-color: #d4d3d3;
+		padding: 12px;
+		background-color: #f4f7f7;
+	}
+	.card-body {
+		text-align: center;
+		border-top: solid 1px;
+		border-color: #d4d3d3;
+	}
+	.card-title {
+		font-weight: 600;
+		font-size: 1.2rem;
+		margin-bottom: 2px;
+	}
+	.card-text {
+		font-weight: 400;
+	}
+	.card-footer {
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.line {
+		border-right: solid 1px;
+		border-color: #d4d3d3;
+	}
+	.breadcline1 {
+		font-size: 0.8rem;
+		font-weight: 700;
+	}
+	.breadcline2 {
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: grey;
+	}
+}
