@@ -1,7 +1,6 @@
 import "./Main.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-	faSearch,
 	faBars,
 	faTrashAlt,
 } from "@fortawesome/free-solid-svg-icons";
@@ -9,101 +8,23 @@ import {
 	Container,
 	Row,
 	Col,
-	InputGroup,
-	FormControl,
 	Card,
 	Button,
 	Image,
 } from "react-bootstrap";
 
+import Movie from "../movie/Movie";
+import Movies from "../../data/MoviesData";
+
 function Main() {
+	const movies = Movies.map(movie => <Movie key={movie.id} Title={movie.Title} Text={movie.Text} Url={movie.Url} LinkUrl={movie.LinkUrl}/>);
 	return (
 		<main>
 			<Container>
-				<Row>
-					<Col md={7}>
-						<InputGroup className="mb-3 mt-3">
-							<FormControl
-								placeholder="Search"
-								aria-label="Search"
-								aria-describedby="basic-addon1"
-							/>
-							<InputGroup.Prepend>
-								<InputGroup.Text id="Icon">
-									<FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
-								</InputGroup.Text>
-							</InputGroup.Prepend>
-						</InputGroup>
-					</Col>
-				</Row>
-				<Row>
-					<Col xs={6} md={4}>
-						<Card className="mb-3">
-							<div className="buttonz pull-right">
-								<Button
-									variant="outline-dark"
-									className="HamburgerButton pull-right"
-								>
-									<FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
-								</Button>
-								<Button
-									variant="outline-dark"
-									className="DeleteButton pull-right"
-								>
-									<FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-								</Button>
-							</div>
-							<Card.Img variant="top" src="./headerbackground.jpg" />
-							<Card.Body>
-								<Image
-									className="datImage"
-									src="./Final.png"
-									roundedCircle
-								></Image>
-								<Card.Title className="mt-4">Easy Blog</Card.Title>
-								<Card.Text>Blog extension for Joomla!</Card.Text>
-							</Card.Body>
-							<Card.Footer>
-								<Row>
-									<Col md={3}>
-										<Row className="line">
-											<Col sm={12} className="breadcline1">
-												Version
-											</Col>
-											<Col sm={12} className="breadcline2">
-												V3.99.3
-											</Col>
-										</Row>
-									</Col>
-									<Col md={6}>
-										<Row className="line">
-											<Col sm={12} className="breadcline1">
-												Source Control
-											</Col>
-											<Col sm={12} className="breadcline2">
-												CodebaseHQ
-											</Col>
-										</Row>
-									</Col>
-									<Col md={3}>
-										<Row>
-											<Col sm={12} className="breadcline1">
-												Hosted
-											</Col>
-											<Col sm={12} className="breadcline2">
-												<a
-													href="https://stackideas.com/easyblog"
-													target="_blank"
-												>
-													View
-												</a>
-											</Col>
-										</Row>
-									</Col>
-								</Row>
-							</Card.Footer>
-						</Card>
-					</Col>
+				<Row>									
+
+					{movies}
+
 					<Col xs={6} md={4}>
 						<Card className="mb-3">
 							<div className="buttonz pull-right">
@@ -159,7 +80,7 @@ function Main() {
 											</Col>
 											<Col sm={12} className="breadcline2">
 												<a
-													href="https://stackideas.com/easysocial"
+													href="https://stackideas.com/easydiscuss"
 													target="_blank"
 												>
 													View
@@ -645,5 +566,4 @@ function Main() {
 		</main>
 	);
 }
-
 export default Main;
